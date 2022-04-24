@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideInGithubSoftAssertions {
     @Test
-    void SelenideInGithubJUnitCode() {
+    void selenideInGithubJUnitCode() {
         Selenide.open("https://github.com/");
         $("[data-test-selector=nav-search-input]").setValue("Selenide").pressEnter();
         $$("ul.repo-list li").first().$("[href]").click();
