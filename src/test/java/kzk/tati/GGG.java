@@ -20,3 +20,5 @@ public class GGG {
          */
     }
 }
+
+//  gradle clean test запуск теста из консоли (всего проекта)
