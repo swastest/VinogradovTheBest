@@ -55,10 +55,10 @@ public class SnippetsSelenide {
         $(byTagAndText("div","full text"));
         $(withTagAndText("div","ull text"));
 
-        $("").parent();
-        $("").sibling(1);
-        $("").preceding(1);
-        $("").closest("div");
+        $("").parent(); // ищет родителя снизу вверх, можно повторить его несколько раз, индекс указывать нельзя
+        $("").sibling(1); // ищет брата сверху вниз
+        $("").preceding(1);// ищет брата снизу вверх по дереву
+        $("").closest("div"); // ищет ближайший элменет такого тега, первый див
         $("").ancestor("div"); // the same as closest
         $("div:last-child");
 
@@ -205,5 +205,10 @@ public class SnippetsSelenide {
         executeJavaScript("alert(arguments[0]+arguments[1])", "abc", 12);
         long fortytwo = executeJavaScript("return arguments[0]*arguments[1];", 6, 7);
 
+    }
+    void forMe(){
+        //Скролить до видимого элемента
+        $("[data-title='Видеокарты']").scrollIntoView(false); //скролл вниз true - вверх
+        $("[data-title='Видеокарты']").click();
     }
 }
