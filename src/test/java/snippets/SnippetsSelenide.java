@@ -212,3 +212,6 @@ public class SnippetsSelenide {
         $("[data-title='Видеокарты']").click();
     }
 }
+
+
+//setTimeout(function() {debugger}, 4000);
